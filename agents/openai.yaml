@@ -1,4 +1,4 @@
 interface:
-  display_name: "Japanese Writing and Copywriting"
-  short_description: "Write clear Japanese copy and business prose"
-  default_prompt: "Use $japanese-writing to draft concise, purpose-appropriate Japanese."
+  display_name: "Japanese Writing, Translation & Editing"
+  short_description: "Purpose-aware Japanese writing, translation and summaries"
+  default_prompt: "Use $japanese-writing to write, translate, or edit Japanese for my audience, preserving meaning and the requested format."
