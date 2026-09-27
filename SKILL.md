@@ -1,6 +1,6 @@
 ---
 name: japanese-writing
-description: Write, edit, summarize, or translate Japanese for work and personal communication. Match purpose, relationship, and medium; preserve meaning in English-Japanese translation, line-by-line bilingual text, meeting minutes, noun-ending bullets, and length-limited summaries.
+description: Write, edit, summarize, or translate Japanese for work and personal communication. Match purpose, relationship, and medium; preserve meaning in English-Japanese translation, line-by-line bilingual text, meeting minutes, noun-ending bullets, length-limited summaries, and つまり-mode plain-language gists.
 ---
 
 # Japanese Writing
@@ -47,6 +47,7 @@ description: Write, edit, summarize, or translate Japanese for work and personal
 | 報告、提案、説明、仕様、見出し、スライド、箇条書き、体言止め | [structured-writing.md](references/structured-writing.md) |
 | 会議・打合せ記録、議事録、発言の再構成 | [meeting-minutes.md](references/meeting-minutes.md) |
 | 要約、文字数上限、ちょうど・約N字、複数の長さの要約 | [summaries-and-length.md](references/summaries-and-length.md) |
+| つまりモード、平易な趣旨、口語でのかみ砕き | [summaries-and-length.md](references/summaries-and-length.md) |
 | 英日翻訳、ローカライズ、原文と訳の対照、やさしい日本語 | [translation-and-bilingual.md](references/translation-and-bilingual.md) |
 | 広告、LP、バナー、SNS、UI・エラー文、創作 | [marketing-ux-creative.md](references/marketing-ux-creative.md) |
 | 情報・業務文の演出過多、翻訳調、不自然な比喩の見直し | [plain-japanese-boundaries.md](references/plain-japanese-boundaries.md) |
