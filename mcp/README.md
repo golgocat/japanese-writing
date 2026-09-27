@@ -96,7 +96,7 @@ https://japanese-writing-mcp.sado-igoneri-lp.workers.dev/oauth/google/callback
 5. `npm run check`と`npm run build`を通過した版を`npm run deploy`で公開する。プレースホルダーが残っている場合、deployスクリプトは停止する。
 6. 実Googleログイン、許可外アカウントの拒否、MCPツール呼出し、token更新、対象クライアントの再接続を確認する。公開URL・deployment IDと未確認項目を記録する。
 
-GitHub Actionsはチェックだけを実行し、自動公開しない。Workers/D1/KVの課金・上限は対象アカウントで別途確認する。公開後に利用者全員へ開放したり、Googleの同意画面を公開状態へ変更したりする操作は別途判断する。
+GitHub Actionsのworkflowはチェック専用で、自動公開しない。2026-09-27の確認時点ではリポジトリのActionsが無効のため、CIは未実行。設定の有効化も行っていない。Workers/D1/KVの課金・上限は対象アカウントで別途確認する。公開後に利用者全員へ開放したり、Googleの同意画面を公開状態へ変更したりする操作は別途判断する。
 
 ## Grok Botなどへの利用指示
 
