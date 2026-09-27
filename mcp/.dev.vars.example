@@ -1,0 +1,3 @@
+GOOGLE_CLIENT_ID="your-dedicated-web-client.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="configure-locally-do-not-commit"
+OWNER_EMAIL="owner@example.com"

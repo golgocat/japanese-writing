@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "japanese-writing-mcp-local",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "vars": { "APP_ORIGIN": "http://localhost:18787" },
+  "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "local-oauth" }],
+  "d1_databases": [{ "binding": "AUTH_DB", "database_name": "japanese-writing-auth-local", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }],
+  "env": {
+    "production": {
+      "name": "japanese-writing-mcp",
+      "workers_dev": true,
+      "preview_urls": false,
+      "vars": { "APP_ORIGIN": "https://japanese-writing-mcp.sado-igoneri-lp.workers.dev" },
+      "secrets": { "required": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "OWNER_EMAIL"] },
+      "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "REPLACE_AFTER_APPROVAL" }],
+      "d1_databases": [{ "binding": "AUTH_DB", "database_name": "japanese-writing-auth", "database_id": "REPLACE_AFTER_APPROVAL", "migrations_dir": "migrations" }]
+    }
+  }
+}

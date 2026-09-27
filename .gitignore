@@ -1,0 +1,9 @@
+mcp/node_modules/
+mcp/.wrangler/
+mcp/dist/
+mcp/src/generated/
+mcp/.dev.vars*
+!mcp/.dev.vars.example
+mcp/.env*
+!mcp/.env.example
+*.tsbuildinfo

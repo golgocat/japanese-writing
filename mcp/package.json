@@ -1,0 +1,33 @@
+{
+  "name": "japanese-writing-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "packageManager": "npm@12.1.0",
+  "scripts": {
+    "bundle": "node scripts/bundle-skill.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run bundle && npm run typecheck && npm test && node --test ../scripts/count_characters.test.mjs",
+    "build": "npm run bundle && wrangler deploy --env '' --dry-run --outdir dist",
+    "dev": "npm run bundle && wrangler dev --ip 127.0.0.1 --port 18787",
+    "db:migrate": "wrangler d1 migrations apply AUTH_DB --local",
+    "member": "node scripts/members.mjs",
+    "deploy": "node scripts/deployment-preflight.mjs && npm run bundle && wrangler deploy --env production"
+  },
+  "dependencies": {
+    "@cloudflare/workers-oauth-provider": "1.1.0",
+    "@modelcontextprotocol/server": "2.1.0",
+    "jose": "6.2.12",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "1.2.8",
+    "@cloudflare/workers-types": "5.20260927.1",
+    "@modelcontextprotocol/client": "2.1.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11",
+    "wrangler": "4.141.0"
+  }
+}
