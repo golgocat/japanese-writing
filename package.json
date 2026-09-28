@@ -1,0 +1,23 @@
+{
+  "name": "japanese-writing-mcp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test mcp/src/taiyaku.test.ts && node --test scripts/count_characters.test.mjs",
+    "dev": "wrangler dev",
+    "check": "wrangler check",
+    "dry-run": "wrangler deploy --dry-run --env production",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "0.24.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260928.1",
+    "@types/node": "26.6.3",
+    "typescript": "7.0.2",
+    "wrangler": "4.142.0"
+  }
+}
