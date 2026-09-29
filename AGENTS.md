@@ -23,4 +23,15 @@ npm run dry-run
 
 `align_for_review` segments a source, or pairs it with a translation. It does not call a model. The caller's agent writes the verdict from prompt `check_translation_accuracy`.
 
-Do not deploy unless the task names the target. Production and staging are the named environments. No secrets are declared.
+`/mcp` requires sign-in. `/authorize` asks for an email, sends a code only when that email is already in the allowlist, and does not say whether the address was found. The list is the KV key `emails` in the `ALLOWLIST` binding. It is a JSON array. Do not commit addresses.
+
+```bash
+npm run allow-email -- person@example.com
+```
+
+Secret names, values stay in Cloudflare: `SIGN_IN_PEPPER`, `AGENTMAIL_API_KEY`, `AGENTMAIL_INBOX_ID`.
+
+```bash
+npm run dry-run
+npx wrangler deploy --env production
+```

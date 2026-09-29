@@ -3,13 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --experimental-strip-types --test mcp/src/taiyaku.test.ts && node --test scripts/count_characters.test.mjs",
+    "test": "node --experimental-strip-types --test mcp/src/*.test.ts && node --test scripts/count_characters.test.mjs",
+    "allow-email": "node --experimental-strip-types mcp/scripts/allow-email.ts",
     "dev": "wrangler dev",
     "check": "wrangler check",
     "dry-run": "wrangler deploy --dry-run --env production",
     "types": "wrangler types"
   },
   "dependencies": {
+    "@cloudflare/workers-oauth-provider": "1.2.1",
     "@modelcontextprotocol/server": "2.0.0",
     "agents": "0.24.0",
     "zod": "4.6.5"
