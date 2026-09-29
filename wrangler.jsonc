@@ -8,7 +8,7 @@
     "enabled": true,
     "head_sampling_rate": 1
   },
-  "workers_dev": true,
+  "workers_dev": false,
   "preview_urls": false,
   "rules": [
     {
@@ -23,9 +23,7 @@
     },
     "production": {
       "name": "japanese-writing-mcp",
-      "vars": {
-        "WORKER_ORIGIN": "https://japanese-writing-mcp.sado-igoneri-lp.workers.dev"
-      },
+      "workers_dev": false,
       "kv_namespaces": [
         {
           "binding": "OAUTH_KV",

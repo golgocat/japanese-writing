@@ -139,7 +139,7 @@ function readPropEmail(ctx: ExecutionContext): string {
 
 export default {
   fetch(request: Request, env: Env, ctx: ExecutionContext) {
-    const origin = env.WORKER_ORIGIN.replace(/\/$/, "");
+    const origin = new URL(request.url).origin;
     const provider = new OAuthProvider<Env>({
       apiRoute: "/mcp",
       apiHandler,
