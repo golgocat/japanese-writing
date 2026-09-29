@@ -24,6 +24,12 @@
     "production": {
       "name": "japanese-writing-mcp",
       "workers_dev": false,
+      "routes": [
+        {
+          "pattern": "bilingual-mcp.southernbreeze.partners",
+          "custom_domain": true
+        }
+      ],
       "kv_namespaces": [
         {
           "binding": "OAUTH_KV",
