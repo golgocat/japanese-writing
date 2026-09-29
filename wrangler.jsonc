@@ -9,6 +9,7 @@
     "head_sampling_rate": 1
   },
   "workers_dev": true,
+  "preview_urls": false,
   "rules": [
     {
       "type": "Text",
