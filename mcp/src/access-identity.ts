@@ -60,6 +60,7 @@ export async function verifyAccessEmail(input: {
       algorithms: [ALLOWED_ALG],
       issuer: input.config.teamDomain,
       audience: input.config.audience,
+      requiredClaims: ["exp", "iat", "email"],
       clockTolerance: 0,
       currentDate: input.now,
     });

@@ -35,6 +35,7 @@ function baseClaims(extra: Record<string, unknown> = {}) {
     iss: team,
     aud: audience,
     email: "Ada@Example.com",
+    iat: Math.floor(now.getTime() / 1000) - 10,
     exp: Math.floor(now.getTime() / 1000) + 600,
     nbf: Math.floor(now.getTime() / 1000) - 10,
     ...extra,
@@ -74,6 +75,14 @@ test("rejects a tampered token, the wrong issuer, the wrong audience, and a bad 
   assert.equal(failure(await verifyAccessEmail({ token: expired, config, keys, now })), "access_jwt_rejected");
   const notYet = await sign(privateKey, baseClaims({ nbf: Math.floor(now.getTime() / 1000) + 120 }));
   assert.equal(failure(await verifyAccessEmail({ token: notYet, config, keys, now })), "access_jwt_rejected");
+});
+
+test("rejects a signed token that omits exp", async () => {
+  const { privateKey, keys, config } = await fixture();
+  const { exp: _exp, ...claims } = baseClaims();
+  void _exp;
+  const token = await sign(privateKey, claims);
+  assert.equal(failure(await verifyAccessEmail({ token, config, keys, now })), "access_jwt_rejected");
 });
 
 test("rejects algorithms other than RS256 and a missing token", async () => {

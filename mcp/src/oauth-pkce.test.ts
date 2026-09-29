@@ -38,6 +38,7 @@ async function accessToken(email: string, privateKey: CryptoKey) {
     iss: team,
     aud: audience,
     email,
+    iat: issued - 60,
     exp: issued + 600,
     nbf: issued - 60,
   })
