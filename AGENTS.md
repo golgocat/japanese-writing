@@ -23,13 +23,13 @@ npm run dry-run
 
 `align_for_review` segments a source, or pairs it with a translation. It does not call a model. The caller's agent writes the verdict from prompt `check_translation_accuracy`.
 
-`/mcp` requires sign-in. `/authorize` asks for an email, sends a code only when that email is already in the allowlist, and does not say whether the address was found. The list is the KV key `emails` in the `ALLOWLIST` binding. It is a JSON array. Do not commit addresses.
+`/mcp` requires the OAuth bearer token. `/authorize` accepts the person already signed in with Cloudflare Access. It checks the Access JWT and the allowlist. It does not send a second email code. The allowlist is the KV key `emails` in the `ALLOWLIST` binding. It is a JSON array. Do not commit addresses.
 
 ```bash
 npm run allow-email -- person@example.com
 ```
 
-Secret names, values stay in Cloudflare: `SIGN_IN_PEPPER`, `AGENTMAIL_API_KEY`, `AGENTMAIL_INBOX_ID`.
+Production vars to set before the next deploy, not secrets: `ACCESS_TEAM_DOMAIN` (`https://<team>.cloudflareaccess.com`) and `ACCESS_POLICY_AUD` (the Japanese writing MCP application audience tag). Do not delete the existing `SIGN_IN_PEPPER` secret as part of this change. The Worker no longer reads it.
 
 ```bash
 npm run dry-run

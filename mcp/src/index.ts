@@ -1,10 +1,9 @@
-import { OAuthProvider } from "@cloudflare/workers-oauth-provider";
 import { McpServer } from "@modelcontextprotocol/server";
 import { createMcpHandler } from "agents/mcp/server";
 import { z } from "zod";
 import { isEmailAllowed } from "./allowlist.ts";
-import { handleDefault } from "./authorize.ts";
 import type { Env } from "./env.ts";
+import { oauthFetch } from "./oauth-app.ts";
 import procedure from "../../references/translation-and-bilingual.md";
 import {
   accuracyPrompt,
@@ -126,7 +125,7 @@ const apiHandler = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const email = readPropEmail(ctx);
     if (!(await isEmailAllowed(env.ALLOWLIST, email))) {
-      return new Response("This email is not on the list.", { status: 403 });
+      return new Response("This sign-in is not allowed.", { status: 403 });
     }
     return mcp(request, env, ctx);
   },
@@ -139,24 +138,6 @@ function readPropEmail(ctx: ExecutionContext): string {
 
 export default {
   fetch(request: Request, env: Env, ctx: ExecutionContext) {
-    const origin = new URL(request.url).origin;
-    const provider = new OAuthProvider<Env>({
-      apiRoute: "/mcp",
-      apiHandler,
-      defaultHandler: { fetch: handleDefault },
-      authorizeEndpoint: `${origin}/authorize`,
-      tokenEndpoint: `${origin}/oauth/token`,
-      clientRegistrationEndpoint: `${origin}/oauth/register`,
-      scopesSupported: ["mcp", "offline_access"],
-      requiredScopes: ["mcp"],
-      allowPrivateUseRedirectUris: true,
-      clientIdMetadataDocumentEnabled: true,
-      resourceMetadata: {
-        resource: `${origin}/mcp`,
-        authorization_servers: [origin],
-        resource_name: "Japanese writing",
-      },
-    });
-    return provider.fetch(request, env, ctx);
+    return oauthFetch(request, env, ctx, apiHandler);
   },
 };
