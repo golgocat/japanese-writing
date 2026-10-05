@@ -134,8 +134,15 @@
 - 直接性：依頼・不可・期限が分かるか。直接的にするために命令や非難を足していないか。
 - 初見理解：相手が対象と必要な行動を理解でき、返答の要否も判断できるか。
 
+報告・依頼のメールや業務連絡では、送る前に用件の1行目と最終行だけを読む。宛名と定型の挨拶・結びは除いて読む。
+読み手が次に何をするか、何が起きたか（結論・報告内容）が分かるかを確かめる。
+分からなければ、用件や依頼の位置と書き方を見直す。
+宛名、挨拶、クッション言葉を削るための確認ではない。関係に合う礼節は残す。
+すべての文面で1行目を行動の指示にする必要はない。お礼、お祝い、私信はこの確認の対象外にできる。
+
 短さや禁句の数で合否を決めない。自然な原文は残し、意味の変わる修正を避ける。
 
 私信の用件と礼の扱い、仕事の文面の整理は、日本郵便の[プライベート編](https://www.post.japanpost.jp/enjoy/culture/howto/navi/mame_private.html)・[ビジネス編](https://www.post.japanpost.jp/enjoy/culture/howto/navi/mame_official.html)を参考にした。
 手紙の助言をメール等に応用する範囲、文例をそのまま転用しない理由は [research-sources.md](research-sources.md) を参照。
+送る前の1行目と最終行の確認は、[ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)の送信前チェックを日本語のビジネス文に合わせて採用した。
 決定権に応じた依頼は[文化庁の敬語TPO](https://www.bunka.go.jp/seisaku/kokugo_nihongo/kokugo_shisaku/keigo/chapter3/detail.html)、お礼の行為者の区別は[日本郵便のカード文例](https://www.post.japanpost.jp/int/ems/greeting/example/english.html)を参考にした。
