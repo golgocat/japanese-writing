@@ -51,6 +51,7 @@ description: Write, edit, summarize, or translate Japanese for work and personal
 | つまりモード、平易な趣旨、口語でのかみ砕き | [summaries-and-length.md](references/summaries-and-length.md) |
 | 英日翻訳、ローカライズ、原文と訳の対照、やさしい日本語 | [translation-and-bilingual.md](references/translation-and-bilingual.md) |
 | 広告、LP、バナー、SNS、UI・エラー文、創作 | [marketing-ux-creative.md](references/marketing-ux-creative.md) |
+| バナー、スライド、ウェブ、動画テロップ、SNS、メール、チャット返信の字数上限と文字サイズ | [readable-length.md](references/readable-length.md) |
 | 情報・業務文の演出過多、翻訳調、不自然な比喩の見直し | [plain-japanese-boundaries.md](references/plain-japanese-boundaries.md) |
 
 通常の説明・報告は情報・業務文の基準を使う。友人・慶弔・広告・創作の目的が示されている場合は、その目的を優先する。SNSという媒体だけで広告モードにしない。指定書式やプロジェクト固有のルールは、適用対象の案件で優先する。
@@ -84,7 +85,7 @@ description: Write, edit, summarize, or translate Japanese for work and personal
 - 文書にない価格、資格、効能、保証、感想、担当、期限を足さない。最新確認が必要な事実は調べるか、未確認の範囲を残す。
 - 情報・業務文では、1文の「誰が・何を・どうした」を具体名詞で復元する。効く・壊れる・倒す等の比喩動詞と、概念が導く等の擬人化は、具体の操作・人やシステムの行為・観測事実へ戻す。創作依頼、字義どおりの用法、学術の「結果は〜を示している」は残す。
 - 「重要なのは」「XではなくY」などの前置きと、誰も主張していないXの否定は削る。誤解の訂正なら否定を残し、否定の範囲は変えない。解像度・腹落ち・温度感など中身のない語は、調べたこと・決めたことに戻すか確認し、具体を創作しない。
-- 日本語本文にダッシュ（— ―）を使わない。和欧文の間に半角空白を入れない。同じ意味を繰り返すカッコは外す。指定書式、コード、URL、識別子は変えない。詳細は [plain-japanese-boundaries.md](references/plain-japanese-boundaries.md)。
+- em dash（—）、en dash（–）、横棒（―）を文中で使わない。読点・句点・「です」などで書き換える。デザインでも、ラベルや見出しの前に置く飾りの短い横線は使わない（em dashに見えるため）。範囲は「9〜17」のように「〜」で書く。コード、URL、識別子、引用は変えない。和欧文の間に半角空白を入れない。同じ意味を繰り返すカッコは外す。指定書式は変えない。詳細は [plain-japanese-boundaries.md](references/plain-japanese-boundaries.md)。
 
 ## Workflow
 
