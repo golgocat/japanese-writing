@@ -1,6 +1,6 @@
 ---
 name: bilingual-line-by-line
-description: Use this when the user wants English–Japanese (or Japanese–English) text line by line, with each source sentence or pre-existing source line followed directly by its translation. Preserve paragraph boundaries with one blank line between paragraph-level bilingual blocks. Bilingual output only; not for plain translation, polishing, or summaries.
+description: Use this when the user wants English-Japanese (or Japanese-English) text line by line, with each source sentence or pre-existing source line followed directly by its translation. Preserve paragraph boundaries with one blank line between paragraph-level bilingual blocks. Bilingual output only; not for plain translation, polishing, or summaries.
 ---
 
 # 日英対訳（行ごとの対訳）
@@ -66,7 +66,7 @@ Please contact us before the trial ends.
 
 ## 和文の表記
 
-- 日本語の文にダッシュ（— ―）を使わない。
+- em dash（—）、en dash（–）、横棒（―）を文中で使わない。読点・句点・「です」などで書き換える。デザインでも、ラベルや見出しの前に置く飾りの短い横線は使わない（em dashに見えるため）。範囲は「9〜17」のように「〜」で書く。コード、URL、識別子、引用は変えない。
 - 和文と英数字の間に半角空白を入れない（例：「READMEはAPIの使い方を示す」）。
 - 同じ意味を繰り返すだけのカッコを付けない。
 
