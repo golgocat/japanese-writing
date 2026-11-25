@@ -127,6 +127,13 @@
 友人の誕生日：
 > 誕生日おめでとう。楽しい一年になりますように。
 
+## 社内のお知らせ
+
+制度やシステムの変更を伝える社内向けでは、全体の表題を「〜のお知らせ」だけにしない。
+適用が始まる日と、何が変わるかを、表題の書き出しにしてよい。
+節の見出しは、項目の名前のままにする。
+法令、行政の文書、契約の文には、この出し方を使わない。
+
 ## 6基準で見直す
 
 - 自然：実際の関係と媒体に合い、過剰な敬語や不意の親密さがないか。
@@ -148,3 +155,4 @@
 手紙の助言をメール等に応用する範囲、文例をそのまま転用しない理由は [research-sources.md](research-sources.md) を参照。
 送る前の1行目と最終行の確認は、[ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)の送信前チェックを日本語のビジネス文に合わせて採用した。
 決定権に応じた依頼は[文化庁の敬語TPO](https://www.bunka.go.jp/seisaku/kokugo_nihongo/kokugo_shisaku/keigo/chapter3/detail.html)、お礼の行為者の区別は[日本郵便のカード文例](https://www.post.japanpost.jp/int/ems/greeting/example/english.html)を参考にした。
+社内のお知らせの表題は、[AnIT012/nihongo](https://github.com/AnIT012/nihongo)（MIT）を参考にした。法令、行政文書、契約文には広げない。

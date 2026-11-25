@@ -46,7 +46,7 @@ description: Write, edit, summarize, or translate Japanese for work and personal
 
 | 用途・条件 | 読む参照 |
 | --- | --- |
-| ビジネスメール、依頼、断り、催促、お礼、友人・家族、挨拶、お祝い | [business-personal.md](references/business-personal.md) |
+| ビジネスメール、依頼、断り、催促、お礼、友人・家族、挨拶、お祝い、社内のお知らせ | [business-personal.md](references/business-personal.md) |
 | 謝罪、苦情への応答、お悔やみ、お見舞い、繊細な事情 | [sensitive-messages.md](references/sensitive-messages.md) |
 | 報告、提案、説明、仕様、見出し、スライド、箇条書き、体言止め、メール・チャット・READMEの記法とラベル | [structured-writing.md](references/structured-writing.md) |
 | 会議・打合せ記録、議事録、発言の再構成 | [meeting-minutes.md](references/meeting-minutes.md) |
